@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>editarMedico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-input [(ngModel)]="nombre" placeholder="{{medicoRecibido.nombre}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="apellido" placeholder="{{medicoRecibido.apellido}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="especialidad" placeholder="{{medicoRecibido.especialidad}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="cnp" placeholder="{{medicoRecibido.cnp}}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="centroSalud" placeholder="{{medicoRecibido.centroSalud}}"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom" [routerLink]="['/home']">
+    <ion-fab-button color="danger" (click)="editarMedico()">
+      <ion-icon name="save-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

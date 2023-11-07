@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>Datos del médico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card color="danger">
+    <ion-card-header>
+      <ion-card-title>Datos de {{datosMedico.nombre}}</ion-card-title>
+      <ion-card-subtitle>Especialidad: {{datosMedico.especialidad}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content color="danger">
+      <ion-item>{{datosMedico.nombre}}</ion-item>
+      <ion-item>{{datosMedico.apellido}}</ion-item>
+      <ion-item>{{datosMedico.cnp}}</ion-item>
+      <ion-item>{{datosMedico.centroSalud}}</ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom">
+    <ion-fab-button color="danger">
+      <ion-icon name="pencil-outline" [routerLink]="['/editar-medico',idRecibida]"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab slot="fixed" horizontal="start" vertical="bottom">
+    <ion-fab-button color="danger" (click)="deleteMedico()">
+      <ion-icon name="trash-outline" ></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-button [routerLink]="['/home']" color="danger"  vertical="top" horizontal="start"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+</ion-content>

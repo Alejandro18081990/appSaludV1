@@ -1,0 +1,22 @@
+<ion-list>
+  <ion-item>
+    <ion-input [(ngModel)]="nombre" placeholder="Introduce el nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="apellido" placeholder="Introduce el apellido"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="especialidad" placeholder="Introduce la especialidad"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="cnp" placeholder="Introduce el CNP"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="centroSalud" placeholder="Introduce el centro de salud"></ion-input>
+  </ion-item>
+</ion-list>
+<ion-fab slot="fixed" horizontal="start">
+  <ion-fab-button color="danger" (click)="guardarDatos()">
+    <ion-icon name="save-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
